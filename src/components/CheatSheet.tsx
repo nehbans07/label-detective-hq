@@ -50,7 +50,7 @@ const CheatSheet = () => {
         { label: "Examples", text: "Sugar, honey, syrup, malt, molasses" },
         { label: "Secret Code", text: "Ends with -ose (glucose, sucrose, fructose)" },
         { label: "Memory Tip", text: "If it ends with -ose that means sweet dose!" },
-        { label: "WHO Tip", text: "An adult should not eat more than 25 g of added sugar per day — that's about 🥄🥄🥄🥄🥄🥄 (6 teaspoons)." }
+        { label: "World Health Organisation (WHO) Tip", text: "An adult should not eat more than 25 g of added sugar per day — that's about 🥄🥄🥄🥄🥄🥄 (6 teaspoons)." }
       ]
     },
     {
@@ -71,7 +71,7 @@ const CheatSheet = () => {
     <div className="space-y-6">
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-detective bg-clip-text text-transparent">
-          🍀 Label Detective Cheat Sheet
+          🕵️‍♀️ Label Detective Cheat Sheet
         </h2>
         <p className="text-muted-foreground text-lg">
           Your guide to uncovering what's really in your food!
@@ -95,7 +95,7 @@ const CheatSheet = () => {
             <CardContent className="space-y-3">
               {section.items.map((item, itemIdx) => (
                 <div key={itemIdx} className="flex gap-2">
-                  <Badge className={section.color}>{item.label}:</Badge>
+                  <Badge className={`${section.color} text-black dark:text-white`}>{item.label}:</Badge>
                   <p className="text-sm leading-relaxed">{item.text}</p>
                 </div>
               ))}
@@ -106,7 +106,7 @@ const CheatSheet = () => {
 
       <Card className="bg-gradient-detective text-primary-foreground shadow-card-hover">
         <CardHeader>
-          <CardTitle className="text-2xl">📊 WHO Daily Limits</CardTitle>
+          <CardTitle className="text-2xl">📊 World Health Organisation (WHO) Daily Limits</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">

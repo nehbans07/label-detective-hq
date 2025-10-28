@@ -44,13 +44,7 @@ const claims: Claim[] = [
       "❌ Claim is misleading, It's very little fiber"
     ],
     correctAnswer: 1,
-    calculation: [
-      "1️⃣ Total cereal = 100g",
-      "2️⃣ Oats = 5% → 5g per 100g",
-      "3️⃣ Serving = 50g → Oats per serving = ?",
-      "4️⃣ 5g × (50 ÷ 100) = 2.5 g oats → that's your fiber!"
-    ],
-    lesson: "2.5 g fiber per serving is low compared to daily recommended limit of 25 g/day. Don't trust fancy packaging!"
+    lesson: "Step-by-Step Calculation:\n1️⃣ Total cereal = 100g\n2️⃣ Oats = 5% → 5g per 100g\n3️⃣ Serving = 50g → Oats per serving = ?\n4️⃣ 5g × (50 ÷ 100) = 2.5 g oats → that's your fiber!\n\n2.5 g fiber per serving is low compared to daily recommended limit of 25 g/day. Don't trust fancy packaging!"
   },
   {
     id: 3,
@@ -62,7 +56,7 @@ const claims: Claim[] = [
     question: "The drink has no sugar but contains artificial sweeteners. Is the 'Zero Sugar' claim misleading for health?",
     options: [
       "✅ Not misleading - zero sugar means healthy",
-      "❌ Somewhat misleading - artificial sweeteners have their own concerns"
+      "❌ Misleading - artificial sweeteners have their own concerns"
     ],
     correctAnswer: 1,
     lesson: "While technically true (no sugar), artificial sweeteners may have other health effects. 'Zero sugar' doesn't always mean 'healthy'!"
@@ -202,18 +196,6 @@ const ClaimBusters = () => {
             <p className="text-base leading-relaxed">{claim.question}</p>
           </div>
 
-          {claim.calculation && (
-            <Card className="bg-muted/30 border-dashed">
-              <CardHeader>
-                <CardTitle className="text-sm">🧮 Step-by-Step Calculation</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-1">
-                {claim.calculation.map((step, idx) => (
-                  <p key={idx} className="text-sm">{step}</p>
-                ))}
-              </CardContent>
-            </Card>
-          )}
 
           <div className="grid gap-3">
             {claim.options.map((option, index) => {
@@ -256,7 +238,7 @@ const ClaimBusters = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="leading-relaxed">{claim.lesson}</p>
+                <p className="leading-relaxed whitespace-pre-line">{claim.lesson}</p>
               </CardContent>
             </Card>
           )}
