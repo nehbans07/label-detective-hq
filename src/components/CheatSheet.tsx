@@ -11,7 +11,8 @@ const CheatSheet = () => {
       items: [
         { label: "Clue", text: "They are the base of your food; listed first, most abundant." },
         { label: "Examples", text: "Wheat, rice, oats, milk, peanuts, cocoa." },
-        { label: "Memory Tip", text: "First ingredient = What your product is made up of the most. If oil comes first — your item is made up of oil then." }
+        { label: "Memory Tip", text: "First ingredient = What your product is made up of the most. If oil comes first — your item is made up of oil then." },
+        { label: "Whole Grains vs Refined Grains 🌾🥣", text: "Whole grains like wheat, oats, bran, and multigrain still have their husk and natural parts, so they are high in fiber 🌿, help in digestion, and give slow energy ⚡. Refined grains like maida have the husk removed in factories 🏭, so they lose fiber and nutrients ❌ and are not good for digestion." }
       ]
     },
     {

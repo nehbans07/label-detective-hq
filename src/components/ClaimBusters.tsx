@@ -37,14 +37,14 @@ const claims: Claim[] = [
     emoji: "🥣",
     story: 'The "FiberBot Cereal" box claims: "High Fiber for super energy!"',
     claim: '"High Fiber"',
-    ingredients: "Refined wheat (90g), oats (5g), sugar (5g) → per 100g of cereal. Fiber mainly comes from oats.",
-    question: "If the cereal serving is 50g, how much oats (and fiber) do you get? Does this justify the 'High Fiber' claim when recommended daily fiber is ~25 g/day?",
+    ingredients: "Oats 40 g (main source of fiber), wheat 30 g, sugar 10 g, dried fruits and berries 10 g, dark chocolate 10 g → per 100 g cereal. Fiber mainly comes from oats.",
+    question: "Serving size = 50 g. How much oats (and fiber) do you get in one serving? Recommended daily fiber ≈ 25 g/day. Does this justify the 'High Fiber' claim?",
     options: [
       "✅ Yes, Claim is true",
       "❌ Claim is misleading, It's very little fiber"
     ],
-    correctAnswer: 1,
-    lesson: "Step-by-Step Calculation:\n1️⃣ Total cereal = 100g\n2️⃣ Oats = 5% → 5g per 100g\n3️⃣ Serving = 50g → Oats per serving = ?\n4️⃣ 5g × (50 ÷ 100) = 2.5 g oats → that's your fiber!\n\n2.5 g fiber per serving is low compared to daily recommended limit of 25 g/day. Don't trust fancy packaging!"
+    correctAnswer: 0,
+    lesson: "Step-by-Step Calculation:\n1️⃣ Total cereal = 100 g → oats = 40 g\n2️⃣ Serving = 50 g → oats per serving = 40 × (50 ÷ 100) = 20 g fiber\n\n✅ Claim is true! One serving gives 20 g fiber → covers most of the 25 g/day recommended. This cereal really is high in fiber and contributes significantly to daily needs."
   },
   {
     id: 3,
