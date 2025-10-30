@@ -155,7 +155,7 @@ const CheatSheet = () => {
         {foodGroups.map((group, index) => (
           <div
             key={index}
-            className="flip-card h-[340px] cursor-pointer"
+            className="flip-card h-[380px] cursor-pointer"
             onClick={() => toggleFlip(index)}
           >
             <div className={`flip-card-inner ${flippedCards.has(index) ? 'flipped' : ''}`}>
@@ -179,49 +179,49 @@ const CheatSheet = () => {
 
               {/* Back */}
               <Card className="flip-card-back absolute w-full h-full backface-hidden shadow-card bg-gradient-to-br from-primary/10 to-secondary/10">
-                <CardContent className="p-6 h-full overflow-y-auto text-sm space-y-3">
+                <CardContent className="p-5 h-full overflow-y-auto text-sm space-y-2.5">
                   {group.back.howToSpot && (
                     <div>
-                      <p className="font-semibold text-primary">How to spot:</p>
-                      <p className="leading-relaxed">{group.back.howToSpot}</p>
+                      <p className="font-semibold text-primary text-xs">How to spot:</p>
+                      <p className="leading-snug text-xs">{group.back.howToSpot}</p>
                     </div>
                   )}
                   {group.back.foundIn && (
                     <div>
-                      <p className="font-semibold text-primary">Found in:</p>
-                      <p className="leading-relaxed">{group.back.foundIn}</p>
+                      <p className="font-semibold text-primary text-xs">Found in:</p>
+                      <p className="leading-snug text-xs">{group.back.foundIn}</p>
                     </div>
                   )}
                   {group.back.sources && (
                     <div>
-                      <p className="font-semibold text-primary">Sources:</p>
-                      <p className="leading-relaxed whitespace-pre-line">{group.back.sources}</p>
+                      <p className="font-semibold text-primary text-xs">Sources:</p>
+                      <p className="leading-snug whitespace-pre-line text-xs">{group.back.sources}</p>
                     </div>
                   )}
                   {group.back.bodyRole && (
                     <div>
-                      <p className="font-semibold text-primary">Role in body:</p>
-                      <p className="leading-relaxed">{group.back.bodyRole}</p>
+                      <p className="font-semibold text-primary text-xs">Role in body:</p>
+                      <p className="leading-snug text-xs">{group.back.bodyRole}</p>
                     </div>
                   )}
                   {group.back.tooMuch && (
                     <div>
-                      <p className="font-semibold text-destructive">If too much:</p>
-                      <p className="leading-relaxed">{group.back.tooMuch}</p>
+                      <p className="font-semibold text-destructive text-xs">If too much:</p>
+                      <p className="leading-snug text-xs">{group.back.tooMuch}</p>
                     </div>
                   )}
                   {group.back.tooLittle && (
                     <div>
-                      <p className="font-semibold text-warning">If too little:</p>
-                      <p className="leading-relaxed">{group.back.tooLittle}</p>
+                      <p className="font-semibold text-warning text-xs">If too little:</p>
+                      <p className="leading-snug text-xs">{group.back.tooLittle}</p>
                     </div>
                   )}
                   {group.back.extra && (
-                    <div className="pt-2 border-t">
-                      <p className="leading-relaxed font-medium">{group.back.extra}</p>
+                    <div className="pt-2 border-t mt-2">
+                      <p className="leading-snug font-medium text-xs">{group.back.extra}</p>
                     </div>
                   )}
-                  <p className="text-xs text-center text-muted-foreground pt-2">Click to flip back →</p>
+                  <p className="text-[10px] text-center text-muted-foreground pt-2">Click to flip back →</p>
                 </CardContent>
               </Card>
             </div>
