@@ -5,13 +5,10 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  // Use repository name as base path for GitHub Pages, empty for Lovable
-  const isGitHubPages = process.env.GITHUB_PAGES === 'true';
-  
   return {
-    // For GitHub Pages: use repo name as base (update 'label-detective-hq' to your repo name)
-    // For Lovable: use root path
-    base: isGitHubPages ? '/label-detective-hq/' : '/',
+    // Base path: only set for GitHub Pages builds (via GITHUB_PAGES env var)
+    // Lovable always uses root path '/'
+    base: '/',
     server: {
       host: "::",
       port: 8080,
