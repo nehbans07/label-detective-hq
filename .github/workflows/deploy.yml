@@ -35,7 +35,7 @@ jobs:
         run: npm ci
 
       - name: Build for GitHub Pages
-        run: npx cross-env GITHUB_PAGES=true npm run build
+        run: npm run build -- --base=/label-detective-hq/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
